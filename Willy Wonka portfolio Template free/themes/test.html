@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line with Circle</title>
+    <style>
+        /* Container for alignment */
+        .line-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 200px; /* adjust height as needed */
+        }
+
+        /* Style for the line */
+        .line {
+            width: 3px; /* adjust line thickness */
+            height: 100px; /* adjust line height */
+            background-color: #00a4e4; /* line color */
+            position: relative;
+        }
+
+        /* Style for the circle */
+        .circle {
+            width: 20px; /* circle diameter */
+            height: 20px;
+            background-color: #00a4e4; /* circle color */
+            border-radius: 50%;
+            position: absolute;
+            top: -10px; /* to position it at the top of the line */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+<div class="line-container">
+    <div class="line">
+        <div class="circle"></div>
+    </div>
+</div>
+</body>
+</html>
