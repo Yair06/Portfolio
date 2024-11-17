@@ -450,7 +450,17 @@ h2 {
     background-color: #d30000; /* couleur rouge du cercle */
     border-radius: 50%;
     position: absolute;
-    top: 40%; /* position au milieu de la ligne */
+    top: 59%; /* position au milieu de la ligne */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle-three {
+    width: 20px; /* diamètre du cercle */
+    height: 20px;
+    background-color: #d30000; /* couleur rouge du cercle */
+    border-radius: 50%;
+    position: absolute;
+    top: 30%; /* position au milieu de la ligne */
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -460,7 +470,7 @@ h2 {
     background-color: #d30000; /* couleur rouge du cercle */
     border-radius: 50%;
     position: absolute;
-    top: 78%; /* position au milieu de la ligne */
+    top: 87%; /* position au milieu de la ligne */
     left: 50%;
     transform: translate(-50%, -50%);
 }
