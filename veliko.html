@@ -1,47 +1,131 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yair Cohen - Personal Portfolio Website Template</title>
   <!--favicon-img-->
   <link rel="icon" type="image/png" href="https://img.freepik.com/vecteurs-premium/creation-logo-yc-creation-logo-premium-letter-yc-concept-vague-eau_754537-630.jpg">
   <!--favicon-img-->
-  <!--main css file should not be removed -->
+  <!--main css file-->
   <link rel="stylesheet" href="Willy%20Wonka%20portfolio%20Template%20free/themes/css/index.css">
   <!--main css file-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+  <style>
+    /* Styles du Lightbox */
+    #lightbox {
+      display: none; /* Caché par défaut */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000; /* Superposé par-dessus le contenu */
+    }
+
+    /* Style de l'image agrandie */
+    #lightbox img {
+      max-width: 90%; /* S'adapte à la largeur de l'écran */
+      max-height: 90%; /* S'adapte à la hauteur de l'écran */
+      border-radius: 8px;
+      transition: all 0.3s ease; /* Animation douce pour l'agrandissement */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+
+    /* Styles pour les images dans les blogs */
+    .blog-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .blogs {
+      width: 30%;
+      cursor: pointer;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .blogs img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .blogs:hover img {
+      transform: scale(1.05); /* Agrandir légèrement l'image au survol */
+    }
+  </style>
 </head>
 <body>
+
 <div class="services-heading wow">
   <span class="color">Veliko</span>
-</div><div class="blog-content">
-  <div class="blogs">
-      <div class="img">
-        <img src="Willy%20Wonka%20portfolio%20Template%20free/themes/images/Capture%20d'écran%202024-11-02%20204752.png" alt="blog-one">
-      </div>
+</div>
+
+<!-- Contenu des blogs avec images -->
+<div class="blog-content">
+  <div class="blogs" onclick="showImage(this)">
+    <div class="img">
+      <img src="Willy%20Wonka%20portfolio%20Template%20free/themes/images/Capture%20d'écran%202024-11-02%20204752.png" alt="blog-one">
+    </div>
   </div>
 
-  <div class="blogs">
-      <div class="img">
-        <img src="Willy Wonka portfolio Template free/themes/images/img_2.png" alt="blog-three">
-      </div>
+  <div class="blogs" onclick="showImage(this)">
+    <div class="img">
+      <img src="Willy Wonka portfolio Template free/themes/images/img_2.png" alt="blog-two">
+    </div>
   </div>
-  <div class="blogs">
+
+  <div class="blogs" onclick="showImage(this)">
     <div class="img">
       <img src="Willy Wonka portfolio Template free/themes/images/img_3.png" alt="blog-three">
     </div>
   </div>
-  <div class="blogs">
+
+  <div class="blogs" onclick="showImage(this)">
     <div class="img">
-      <img src="Willy Wonka portfolio Template free/themes/images/img_4.png" alt="blog-three">
+      <img src="Willy Wonka portfolio Template free/themes/images/img_4.png" alt="blog-four">
     </div>
   </div>
-  <div class="blogs">
+
+  <div class="blogs" onclick="showImage(this)">
     <div class="img">
-      <img src="Willy Wonka portfolio Template free/themes/images/img_5.png" alt="blog-three">
+      <img src="Willy Wonka portfolio Template free/themes/images/img_5.png" alt="blog-five">
     </div>
   </div>
- </div>
+</div>
+
+<!-- Lightbox pour afficher l'image en grand -->
+<div id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img" src="" alt="Enlarged Image">
+</div>
+
+<!-- Script JavaScript pour la gestion du lightbox -->
+<script>
+  // Fonction pour afficher l'image en grand
+  function showImage(element) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    // Afficher la boîte de dialogue
+    lightbox.style.display = 'flex';
+
+    // Charger l'image cliquée dans le lightbox
+    lightboxImg.src = element.querySelector('img').src;
+  }
+
+  // Fonction pour fermer le lightbox
+  function closeImage() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+  }
+</script>
+
 </body>
 </html>

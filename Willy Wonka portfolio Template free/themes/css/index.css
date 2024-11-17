@@ -1213,6 +1213,71 @@ padding-bottom: 40px;
     text-decoration: none;
     color: whitesmoke;
 }
+.veliko{
+    height: 420px;
+    width: 40%;
+    margin: 20px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.veliko .img{
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+    transition: all .65s ease;
+    position: relative;
+}
+.veliko-date{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #c70039;
+    color: whitesmoke;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    font-family: poppins;
+    padding: 3px;
+    transition: all .4s ease;
+    width: 25%;
+    height: auto;
+}
+.veliko .img img{
+    height: 100%;
+    width: 100%;
+    transition: all .65s ease;
+}
+.veliko-text{
+    height: 80%;
+    width: 100%;
+    text-align: center;
+    vertical-align: center;
+    font-family: poppins;
+    color: whitesmoke;
+    background-color: #050505;
+    transition: all .5s ease;
+}
+.veliko-text h3{
+    font-size: 28px;
+    font-weight: 500;
+    height: 20%;
+    padding: 20px;
+    letter-spacing: 1px;
+}
+.veliko-text p{
+    font-size: 18px;
+    opacity: .9;
+    font-weight: 400;
+    height: 80%;
+    padding: 30px;
+    letter-spacing: 1px;
+}
+
+.veliko a{
+    text-decoration: none;
+    color: whitesmoke;
+}
 #contact{
     display: none;
     height: auto;
@@ -1764,6 +1829,109 @@ For devices with smaller width like mobile phone
                 transition: all .4s ease;
                 display: none;
             }
+    /* Styles pour le conteneur */
+    #lightbox {
+        display: none; /* Caché par défaut */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Superposé par-dessus le contenu */
+    }
+
+    /* Style de l'image agrandie */
+    #lightbox img {
+        max-width: 90%; /* S'adapte à la largeur de l'écran */
+        max-height: 90%; /* S'adapte à la hauteur de l'écran */
+        border-radius: 8px;
+        transition: all 0.3s ease; /* Animation douce pour l'agrandissement */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
+    #close-btn {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    #veliko{
+        background: #101010;
+        display: none;
+        color:whitesmoke;
+        width: 100%;
+        height: auto;
+    }
+    .veliko-content {
+        display: flex;
+        flex-wrap: wrap; /* Permet le retour à la ligne */
+        gap: 20px; /* Espacement entre les éléments */
+        justify-content: center; /* Centrer les éléments */
+    }
+
+    .veliko {
+        flex: 1 1 calc(30% - 20px); /* Largeur flexible avec 30% de l'espace parent */
+        max-width: calc(30% - 20px);
+        height: auto;
+        margin: 10px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .veliko .img img {
+        height: auto;
+        width: 100%;
+        transition: all .65s ease;
+    }
+    .veliko-date{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: whitesmoke;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 400;
+        font-family: poppins;
+        padding: 3px;
+        width: 35%;
+        height: auto;
+    }
+    .veliko .img img{
+        height: 100%;
+        width: 100%;
+        transition: all .65s ease;
+    }
+    .veliko-text{
+        height: auto;
+        width: 100%;
+        text-align: center;
+        vertical-align: center;
+        font-family: poppins;
+        color: whitesmoke;
+        background-color: #000000;
+        transition: all .5s ease;
+    }
+    .veliko-text h3{
+        font-size: 24px;
+        font-weight: 200;
+        height: 15%;
+        padding: 10px;
+        letter-spacing: 1px;
+    }
+    .veliko-text p{
+        font-size: 15px;
+        opacity: .9;
+        font-weight: 200;
+        height: 85%;
+        padding: 20px;
+        letter-spacing: 1px;
+    }
             .blogs{
                 height: auto;
                 width: 90%;
