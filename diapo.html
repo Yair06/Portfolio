@@ -26,9 +26,8 @@
     }
 
     #lightbox img {
-      width: 90%;  /* Fixe une largeur constante */
-      max-height: 80%; /* Limite la hauteur au max pour l'affichage */
-      object-fit: contain; /* S'assure que l'image est entièrement visible sans coupure */
+      max-width: 90%;
+      max-height: 90%;
       border-radius: 8px;
       transition: all 0.3s ease;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -52,11 +51,9 @@
 
     .slides img {
       width: 100%;
-      height: 400px; /* Fixe une hauteur uniforme */
-      object-fit: cover; /* Ajuste l'image pour remplir l'espace sans distorsion */
       border-radius: 10px;
+      cursor: pointer;  /* Ajout d'un curseur pour montrer qu'on peut cliquer */
     }
-
 
     .prev, .next {
       position: absolute;

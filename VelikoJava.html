@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yair Cohen - Personal Portfolio Website Template</title>
+    <!--favicon-img-->
+    <link rel="icon" type="image/png" href="https://img.freepik.com/vecteurs-premium/creation-logo-yc-creation-logo-premium-letter-yc-concept-vague-eau_754537-630.jpg">
+    <!--main css file-->
+    <link rel="stylesheet" href="Willy%20Wonka%20portfolio%20Template%20free/themes/css/index.css">
+    <!--main css file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <style>
+        /* Styles du Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+
+        /* Styles du diaporama */
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: none;
+            width: 100%;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;  /* Ajout d'un curseur pour montrer qu'on peut cliquer */
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        .prev:hover, .next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="services-heading wow">
+    <span class="color">Veliko Java</span>
+</div>
+
+<!-- Diaporama -->
+<div class="slideshow-container">
+    <div class="slides">
+        <img src="Willy Wonka portfolio Template free/themes/images/Capture d'écran 2025-02-12 122608.png" alt="Image 1" onclick="showImage(this)">
+    </div>
+    <div class="slides">
+        <img src="Willy Wonka portfolio Template free/themes/images/Capture d'écran 2025-02-12 122753.png" alt="Image 2" onclick="showImage(this)">
+    </div>
+    <div class="slides">
+        <img src="Willy Wonka portfolio Template free/themes/images/Capture d'écran 2025-02-23 115831.png" alt="Image 3" onclick="showImage(this)">
+    </div>
+
+
+    <!-- Flèches de navigation -->
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeImage()">
+    <img id="lightbox-img" src="" alt="Enlarged Image">
+</div>
+
+<!-- Script JavaScript -->
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slides");
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.style.display = "none");
+        slides[index].style.display = "block";
+    }
+
+    function changeSlide(n) {
+        slideIndex += n;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        if (slideIndex < 0) slideIndex = slides.length - 1;
+        showSlide(slideIndex);
+    }
+
+    // Afficher la première image au chargement
+    showSlide(slideIndex);
+
+    // Fonction pour afficher l'image en grand (lightbox)
+    function showImage(element) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        // Afficher le lightbox
+        lightbox.style.display = 'flex';
+
+        // Charger l'image dans le lightbox
+        lightboxImg.src = element.src;
+    }
+
+    // Fonction pour fermer le lightbox
+    function closeImage() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
