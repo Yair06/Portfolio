@@ -1,422 +1,409 @@
-
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-
-    <title>Yair Cohen - Personal Portfolio Website Template</title>
-    <!--favicon-img-->
-    <link rel="icon" type="image/png" href="https://img.freepik.com/vecteurs-premium/creation-logo-yc-creation-logo-premium-letter-yc-concept-vague-eau_754537-630.jpg">
-    <!--favicon-img-->
-    <!--main css file should not be removed -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yair Cohen — Développeur Web Full-Stack</title>
+    <meta name="description"
+        content="Portfolio de Yair Cohen, développeur web full-stack spécialisé en React, Vue, Laravel, Symfony. Étudiant en Bachelor CDWFS à l'ORT Montreuil.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="Willy%20Wonka%20portfolio%20Template%20free/themes/css/index.css">
-    <!--main css file-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-<!--contains all the div-->
-<div id="all">
-    <!--mouse  follower-->
-    <div class="cursor"></div>
-    <!--mouse  follower-->
-    <!--loader-->
+
+    <!-- ═══ LOADER ═══ -->
     <div id="loader">
-        <span class="color">Yair</span>Cohen
+        <span class="gradient-text">Yair</span>&nbsp;Cohen
     </div>
-    <!--loader-end-->
-    <!--link-screen-->
-    <div id="breaker">
-    </div>
-    <div id="breaker-two">
-    </div>
-    <!--link-screen-->
-    <!--Main-Section-->
-    <!--Navigator-fullscreen-->
-    <div id="navigation-content">
-            <div class="logo">
-                <img src="https://img.freepik.com/vecteurs-premium/creation-logo-yc-creation-logo-premium-letter-yc-concept-vague-eau_754537-630.jpg" alt="logo">
+
+    <!-- ═══ NAVIGATION ═══ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#hero" class="nav-logo"><span class="gradient-text">Y</span>C</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#hero">Accueil</a>
+                <a href="#about">Profil</a>
+                <a href="#skills">Compétences</a>
+                <a href="#missions">Missions</a>
+                <a href="#projects">Projets</a>
+                <a href="#contact">Contact</a>
+                <a href="file:///C:/Users/cohen/Downloads/CV%20Yair%20Cohen%20(9).pdf" class="nav-cv-btn"
+                    target="_blank">
+                    <i class="fas fa-download"></i> Mon CV
+                </a>
             </div>
-
-        <div class="navigation-close">
-            <span class="close-first"></span>
-            <span class="close-second"></span>
-        </div>
-        <div class="navigation-links">
-            <a href="#" data-text="ACCEUIL" id="home-link" >ACCEUIL</a>
-            <a href="#" data-text="PROFIL" id="about-link" >PROFIL</a>
-            <a href="#" data-text="ENTREPRISES" id="blog-link" >ENTREPRISES</a>
-            <a href="#" data-text="MISSIONS" id="portfolio-link" >MISSIONS</a>
-            <a href="#" data-text="PROJETS" id="contact-link" >PROJETS</a>
-        </div>
-    </div>
-    <!--Navigator-Fullscreen END-->
-    <!--Home Page-->
-    <!--Menubar-->
-    <div id="navigation-bar">
-            <div class="logo">
-                <img src="https://img.freepik.com/vecteurs-premium/creation-logo-yc-creation-logo-premium-letter-yc-concept-vague-eau_754537-630.jpg" alt="logo">
-            </div>
-
-        <div class="menubar">
-            <span class="first-span"></span>
-            <span class="second-span"></span>
-            <span class="third-span"></span>
-        </div>
-    </div>
-    <!--Menubar End-->
-    <!--Header-->
-    <div id="header">
-        <div id="particles"></div>
-        <!--Social Media Links-->
-
-        <!--Social Media Links end-->
-        <div class="header-content">
-            <div class="header-content-box">
-                <div class="firstline"><span class="color">Yair </span>Cohen</div>
-                <div class="secondline">
-                    <span class="txt-rotate color" data-period="1200"data-rotate='[ " Bienvenue sur mon portfolio !", " Bienvenue sur mon portfolio !" ]'></span>
-                    <span class="slash">|</span>
-                </div>
-                <div class="contact">
-                </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-        <!--header image-->
+    </nav>
 
-        <!--header image end-->
-    </div>
-    <!--Header End-->
-    <!--HomePage End-->
-    <!--Main-Section End-->
-    <!--about-->
-    <div id="about">
-        <div class="color-changer">
+    <!-- ═══ HERO ═══ -->
+    <section class="hero section" id="hero">
+        <div class="hero-content">
+            <p class="hero-greeting reveal">Bonjour, je suis</p>
+            <h1 class="hero-name reveal reveal-delay-1">
+                <span class="gradient-text">Yair</span> Cohen
+            </h1>
+            <p class="hero-tagline reveal reveal-delay-2">
+                <span class="typing-text"
+                    data-phrases='["Développeur Web Full-Stack", "Étudiant en Bachelor CDWFS", "Bienvenue sur mon portfolio !"]'></span><span
+                    class="typing-cursor"></span>
+            </p>
+            <div class="hero-cta reveal reveal-delay-3">
+                <a href="#projects" class="btn-primary">
+                    <i class="fas fa-rocket"></i> Voir mes projets
+                </a>
+                <a href="#about" class="btn-secondary">
+                    <i class="fas fa-user"></i> En savoir plus
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
-            <div class="color-selector">
-                <div class="heading">Custom Colors</div>
-                <div class="colors">
-                    <ul >
-                        <li>
-                            <a href="#0" class="color-red " title="color-red"></a>
-                        </li>
-                        <li>
-                            <a href="#0" class="color-purple" title="color-purple"></a>
-                        </li>
-                        <li>
-                            <a href="#0" class="color-malt" title="color-malt"></a>
-                        </li>
-                        <li>
-                            <a href="#0" class="color-green" title="color-green"></a>
-                        </li>
-                        <li>
-                            <a href="#0" class="color-blue" title="color-blue"></a>
-                        </li>
-                        <li>
-                            <a href="#0" class="color-orange" title="color-orange"></a>
-                        </li>
-                    </ul>
+    <!-- ═══ ABOUT ═══ -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">À propos</span>
+                <h2 class="section-title">Mon parcours</h2>
+            </div>
+
+            <div class="about-content">
+                <!-- Left: About text -->
+                <div class="about-text-block reveal">
+                    <p class="about-intro">
+                        Je suis Yair Cohen, j'ai 22 ans et je suis étudiant à l'ORT Montreuil, en bachelor en
+                        développement web.
+                    </p>
+                    <p class="about-description">
+                        Le Bachelor m'a permis d'approfondir mes connaissances en développement et en gestion de projets
+                        informatiques, consolidant ainsi mes compétences dans ces domaines techniques.
+                    </p>
+                    <a href="file:///C:/Users/cohen/Downloads/CV%20Yair%20Cohen%20(9).pdf" class="btn-primary"
+                        target="_blank">
+                        <i class="fas fa-file-pdf"></i> Afficher mon CV
+                    </a>
+                </div>
+
+                <!-- Right: Timeline -->
+                <div class="timeline reveal reveal-delay-2">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026 – 2028</div>
+                        <div class="timeline-title">Master EADL</div>
+                        <div class="timeline-subtitle">3iL Ingénieurs</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025 – 2026</div>
+                        <div class="timeline-title">Bachelor CDWFS</div>
+                        <div class="timeline-subtitle">3iL Ingénieurs</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024 – 2025</div>
+                        <div class="timeline-title">BTS SIO 2ème année — en alternance</div>
+                        <div class="timeline-subtitle">Lycée ORT Montreuil, Option <em>SLAM</em></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 – 2024</div>
+                        <div class="timeline-title">BTS SIO 1ère année — en initial</div>
+                        <div class="timeline-subtitle">Lycée ORT Montreuil, Option <em>SLAM</em></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 – 2022</div>
+                        <div class="timeline-title">Licence 1 LLCER</div>
+                        <div class="timeline-subtitle">Université de Lille</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020 – 2021</div>
+                        <div class="timeline-title">Baccalauréat général</div>
+                        <div class="timeline-subtitle">Spécialité Physique, SVT — Lycée Apprendre Autrement, Montmagny
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--about content-->
-        <div id="about-content">
-            <div class="about-header">
-                A propos de  <span class="color">moi</span>
-            </div>
-            <div class="about-main">
-                <div class="about-first-paragraph wow">
-                    <!--about description-->
-                    <span class="about-first-line">
-            Je suis Yair Cohen, j'ai 21 ans et je suis étudiant à l'ORT Montreuil, en deuxième année de BTS SIO, spécialité SLAM.
-                    </span>
-                    <br>
-                    <span class="about-second-line">
-            Le BTS SIO m’a permis d’approfondir mes connaissances en développement et en gestion en gestion de projets informatiques, consolidant ainsi mes compétences dans ces domaines techniques.</span>
-                </div>
+    </section>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Compétences</span>
+                <h2 class="section-title">Ma stack technique</h2>
             </div>
 
-
-            <section id="formations">
-                <h2>Mon parcours</h2><br>
-                <div class="line-container">
-                    <div class="line">
-                        <div class="circle-top"></div>    <!-- Cercle en haut -->
-                        <div class="circle-middle"></div> <!-- Cercle au milieu -->
-                        <div class="circle-three"></div>
-                        <div class="circle-bas"></div><!-- Cercle en bas -->
+            <!-- Front-End -->
+            <div class="skills-category reveal">
+                <h3 class="skills-category-title">
+                    <span class="cat-icon"><i class="fas fa-palette"></i></span> Front-End
+                </h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-html5"></i></span>
+                        <span class="skill-name">HTML / CSS</span>
                     </div>
-
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h3>BTS SIO 2ème année - en alternance</h3>
-                            <div class="date">2024 - 2025</div>
-                            <p>Lycée ORT MONTREUIL, Option <em>SLAM</em> (Solutions Logicielles et Applications Métiers)</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h3>BTS SIO 1ère année - en initial</h3>
-                            <div class="date">2023 - 2024</div>
-                            <p>Lycée ORT MONTREUIL, Option <em>SLAM</em> (Solutions Logicielles et Applications Métiers)</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h3>Licence 1 Langues, littératures et civilisations étrangères et régionales</h3>
-                            <div class="date">2021 - 2022</div>
-                            <p>Université de Lille</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h3>Baccalauréat géneral, spécialité physique, SVT</h3>
-                            <div class="date">2020 - 2021</div>
-                            <p>Lycée Apprendre autrement, 9 ruelle des jardins, 95360 Montmagny</p>
-                        </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-js-square"></i></span>
+                        <span class="skill-name">JavaScript</span>
                     </div>
-                </div>
-            </section>
-
-            <div class="cv">
-                <a href="Willy Wonka portfolio Template free/documentations/assets/CV Yair.pdf"><button>Afficher mon <span class="color">CV</span></button></a>
-            </div>
-
-
-        <!--services content end-->
-        <!--services end-->
-        <div id="skills">
-            <div class="skills-header">
-                Mes <span class="color"> Compétences</span>
-            </div>
-            <div class="skills-content " style="text-align: center;">
-                <h1>Front-End</h1>
-
-                <div class="skill-html skill">
-                    <div class="skill-text">
-                        <div class="html">
-                            HTML/CSS
-                        </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-react"></i></span>
+                        <span class="skill-name">ReactJS</span>
                     </div>
-                    <div class="html-prog wow prog">
-                        <div class="html-progress wow"></div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-vuejs"></i></span>
+                        <span class="skill-name">VueJS</span>
                     </div>
-                </div>
-                <div class="skill-html skill">
-                    <div class="skill-text">
-                        <div class="html">
-                            Javascript
-                        </div>
-                    </div>
-                    <div class="html-prog wow prog">
-                        <div class="js-progress wow"></div>
-                    </div>
-                </div>
-                <h1>Back-End</h1>
-                <div class="skill-html skill">
-                    <div class="skill-text">
-                        <div class="html">
-                            Java
-                        </div>
-                    </div>
-                    <div class="html-prog wow prog">
-                        <div class="adobe-progress wow"></div>
-                    </div>
-                </div>
-                <div class="skill-html skill">
-                    <div class="skill-text">
-                        <div class="html">
-                            PHP
-                        </div>
-                    </div>
-
-                    <div class="html-prog wow prog">
-                        <div class="jquery-progress wow"></div>
-                    </div>
-                </div>
-
-                <div class="skill-html skill">
-                    <div class="skill-text">
-                        <div class="html">
-                            Symfony
-                        </div>
-                    </div>
-                    <div class="html-prog wow prog">
-                        <div class="seo-progress wow"></div>
-                    </div>
-                </div>
-                <div class="skill-html skill">
-                    <div class="skill-text">
-                        <div class="html">
-                            Laravel
-                        </div>
-                    </div>
-                    <div class="html-prog wow prog">
-                        <div class="php-progress wow"></div>
-                    </div>
-                </div>
-                <div class="skill-html skill">
-                    <div class="skill-text">
-                        <div class="html">
-                            Python
-                        </div>
-                    </div>
-                    <div class="html-prog wow prog">
-                        <div class="seo-progress wow"></div>
-                    </div>
-                </div>
-                <h1>Data & DevOps</h1>
-
-                <div class="skill-html skill">
-                    <div class="skill-text">
-                        <div class="html">
-                            SQL
-                        </div>
-                    </div>
-                    <div class="html-prog wow prog">
-                        <div class="seo-progress wow"></div>
-                    </div>
-                </div>
-                <div class="skill-html skill">
-                    <div class="skill-text">
-                        <div class="html">
-                            Docker
-                        </div>
-                    </div>
-                    <div class="html-prog wow prog">
-                        <div class="seo-progress wow"></div>
-                    </div>
-                </div>
-                <div class="cv">
-                    <a href="Willy Wonka portfolio Template free/documentations/assets/Synthèse Epreuve E5 2025 (1).pdf"><button>Afficher mon <span class="color">tableau de synthèse</span></button></a>
-            </div>
-            </div>
-
-        </div>
-        <!--copyright-section You Can Remove After Downloading-->
-
-        <!--copyright-section-->
-    </div>
-    </div>
-
-
-
-    <!--about end-->
-    <!--portfolio-->
-    <div id="portfolio">
-
-        <div class="portfolio-header"> <span class="color"> Mes </span> Missions
-
-        <div class="services-content">
-            <div class="service-two service wow">
-                <div class="service-img">
-                    <img src="Willy%20Wonka%20portfolio%20Template%20free/themes/images/instagram.png" alt="service-two">
-                </div>
-                <div class="service-description">
-                    <h2>Création d'un blog</h2>
-                    <p>Application Laravel permettant de gérer des publications, commentaires, et leurs actions (création, modification, suppression).</p>
-                </div>
-            </div>
-            <div class="service-one service wow">
-                <div class="service-img">
-                    <img src="Willy%20Wonka%20portfolio%20Template%20free/themes/images/coding.png" alt="service-one">
-                </div>
-                <div class="service-description">
-                    <h2>Deduplication</h2>
-                    <p>
-                        Application pour uploader, dédupliquer, stocker des fichiers CSV et notifier par email les utilisateurs.</p>
                 </div>
             </div>
 
-            <div class="service-three service wow">
-                <div class="service-img">
-                    <img src="Willy%20Wonka%20portfolio%20Template%20free/themes/images/bulb.png" alt="service-three">
-                </div>
-                <div class="service-description">
-                    <h2>Creation d'un site E-commerce</h2>
-                    <p>Site commercial présentant une large gamme d'accessoires pour mobiles.</p>
+            <!-- Back-End -->
+            <div class="skills-category reveal">
+                <h3 class="skills-category-title">
+                    <span class="cat-icon"><i class="fas fa-server"></i></span> Back-End
+                </h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-java"></i></span>
+                        <span class="skill-name">Java</span>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-php"></i></span>
+                        <span class="skill-name">PHP</span>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-symfony"></i></span>
+                        <span class="skill-name">Symfony</span>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-laravel"></i></span>
+                        <span class="skill-name">Laravel</span>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-python"></i></span>
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-node-js"></i></span>
+                        <span class="skill-name">NodeJS</span>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fas fa-bolt"></i></span>
+                        <span class="skill-name">FastAPI</span>
+                    </div>
                 </div>
             </div>
 
-        </div>
-
-    </div>
-    </div>
-
-    <!--portfolio end-->
-    <!--blog-->
-    <div id="blog">
-
-        <div class="blog-header"><span class="color"> Mes</span> Entreprises
-            <div id="portfolio-content">
-                <div class="portfolio portfolio-first">
-                    <div class="portfolio-image">
-                        <img src="Willy Wonka portfolio Template free/themes/images/Capture d'écran 2025-03-02 124711.png" alt="portfolio-second">
+            <!-- Databases -->
+            <div class="skills-category reveal">
+                <h3 class="skills-category-title">
+                    <span class="cat-icon"><i class="fas fa-database"></i></span> Base de données
+                </h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fas fa-database"></i></span>
+                        <span class="skill-name">SQL</span>
                     </div>
-                    <div class="portfolio-text">
-                        <h2>Cyberbotz</h2>
-                        <p>Stage chez un developpeur web</p>
-                        <div class="button"><a href="Willy Wonka portfolio Template free/documentations/assets/Cyberbotz-Analyse-de-lentreprise (1).pdf"><button><span class="index"> Présentation de l'entreprise <i class="gg-arrow-right"></i></span></button></a></div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fas fa-database"></i></span>
+                        <span class="skill-name">MySQL</span>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fas fa-leaf"></i></span>
+                        <span class="skill-name">MongoDB</span>
                     </div>
                 </div>
-                <div class="portfolio portfolio-second">
-                    <div class="portfolio-image">
-                        <img src="Willy%20Wonka%20portfolio%20Template%20free/themes/images/Capture%20d'écran%202024-11-04%20164933.png" alt="portfolio-first">
-
-                    </div>
-                    <div class="portfolio-text">
-                        <h2>PH26</h2>
-                        <p>Entreprise dans le Ecommerce qui vend du matériel informatique</p>
-                        <div class="button"><a href="Willy Wonka portfolio Template free/documentations/assets/PH26-Analyse-Strategique (1).pdf"><button><span class="index"> Présentation de l'entreprise <i class="gg-arrow-right"></i></span></button></a></div>
-                    </div>
-                </div>
-
-
-
             </div>
-            <!--copyright-section You Can Remove After Downloading-->
 
+            <!-- DevOps -->
+            <div class="skills-category reveal">
+                <h3 class="skills-category-title">
+                    <span class="cat-icon"><i class="fas fa-cogs"></i></span> DevOps & Outils
+                </h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-docker"></i></span>
+                        <span class="skill-name">Docker</span>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-git-alt"></i></span>
+                        <span class="skill-name">Git</span>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fas fa-infinity"></i></span>
+                        <span class="skill-name">CI/CD</span>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-github"></i></span>
+                        <span class="skill-name">GitHub Actions</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-        <!--blog end-->
-        <!--contact-->
-            <div id="contact">
+    <!-- ═══ MISSIONS ═══ -->
+    <section class="section" id="missions">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Expérience</span>
+                <h2 class="section-title">Mes missions</h2>
+            </div>
 
-                <div class="services-heading wow">
-                    <span class="color">Mes</span> Projets
-                </div>
-                <div class="blog-content">
-                    <div class="blogs">
-                        <a href="veliko.html">
-                            <div class="img">
-                                <img src="Willy%20Wonka%20portfolio%20Template%20free/themes/images/Capture%20d'écran%202024-11-02%20204752.png" alt="blog-one">
-                            </div>
-                            <div class="blog-text">
-                                <h3>Veliko Web</h3>
-
-                                <p>Veliko est une application qui permet aux utilisateurs de repérer facilement des vélos disponibles grâce à une carte interactive. L’application se concentre sur la visualisation en temps réel des vélos et des stations, offrant aussi la possibilité de marquer ses stations préférées pour un accès rapide.</p>
-                            </div></a>
+            <div class="missions-grid">
+                <div class="mission-card reveal">
+                    <div class="mission-icon">
+                        <i class="fas fa-blog"></i>
                     </div>
-                    <div class="blogs">
-                        <a href="VelikoJava.html">
-                            <div class="img">
-                                <img src="Willy Wonka portfolio Template free/themes/images/Capture d'écran 2025-03-23 214437.png" alt="blog-one">
-                            </div>
-                            <div class="blog-text">
-                                <h3>Veliko Java</h3>
-
-                                <p>Partie administrative de Veliko qui permet aux gestionnaires de superviser les utilisateurs, les réservations et d’accéder aux statistiques détaillées de l’application.</p>
-                            </div></a>
-                    </div>
-
+                    <h3>Création d'un blog</h3>
+                    <p>Application Laravel permettant de gérer des publications, commentaires, et leurs actions
+                        (création, modification, suppression).</p>
                 </div>
 
-            <!--contact end-->
+                <div class="mission-card reveal reveal-delay-1">
+                    <div class="mission-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Déduplication</h3>
+                    <p>Application pour uploader, dédupliquer, stocker des fichiers CSV et notifier par email les
+                        utilisateurs.</p>
+                </div>
+
+                <div class="mission-card reveal reveal-delay-2">
+                    <div class="mission-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Création de sites E-commerce</h3>
+                    <p>Développement de plusieurs sites commerciaux : accessoires pour mobiles, chaussures de luxe et
+                        robes de mariée.</p>
+                </div>
+            </div>
         </div>
-    <!--all the divisions-->
-    <script src="Willy%20Wonka%20portfolio%20Template%20free/themes/js/jquery.min.js"></script>
-    <script src="Willy%20Wonka%20portfolio%20Template%20free/themes/js/particles.js"></script>
-    <script src="Willy%20Wonka%20portfolio%20Template%20free/themes/js/particles.min.js"></script>
+    </section>
+
+    <!-- ═══ PROJECTS ═══ -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Mes projets</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Veliko Web -->
+                <a href="veliko.html" class="project-card reveal">
+                    <div class="project-card-image">
+                        <img src="Willy%20Wonka%20portfolio%20Template%20free/themes/images/Capture%20d'%C3%A9cran%202024-11-02%20204752.png"
+                            alt="Veliko Web — Application de localisation de vélos">
+                        <div class="project-card-overlay">
+                            <span class="project-view-btn">Voir le projet →</span>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Veliko Web</h3>
+                        <p>Application qui permet aux utilisateurs de repérer facilement des vélos disponibles grâce à
+                            une carte interactive, avec visualisation en temps réel des stations et la possibilité de
+                            marquer ses stations préférées.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Web App</span>
+                            <span class="project-tag">Carte Interactive</span>
+                            <span class="project-tag">Temps réel</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Veliko Java -->
+                <a href="VelikoJava.html" class="project-card reveal reveal-delay-1">
+                    <div class="project-card-image">
+                        <img src="Willy%20Wonka%20portfolio%20Template%20free/themes/images/Capture%20d'%C3%A9cran%202025-03-23%20214437.png"
+                            alt="Veliko Java — Administration">
+                        <div class="project-card-overlay">
+                            <span class="project-view-btn">Voir le projet →</span>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Veliko Java</h3>
+                        <p>Partie administrative de Veliko qui permet aux gestionnaires de superviser les utilisateurs,
+                            les réservations et d'accéder aux statistiques détaillées de l'application.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">Administration</span>
+                            <span class="project-tag">Statistiques</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Shid'app -->
+                <a href="shidapp.html" class="project-card reveal reveal-delay-2">
+                    <div class="project-card-image">
+                        <img src="Image/Capture%20d'%C3%A9cran%202026-06-25%20195755.png" alt="Shid'app">
+                        <div class="project-card-overlay">
+                            <span class="project-view-btn">Voir le projet →</span>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Shid'app</h3>
+                        <p>Application complète avec une interface utilisateur riche et de nombreuses fonctionnalités
+                            interactives.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Application</span>
+                            <span class="project-tag">Full-Stack</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Restons en contact</h2>
+            </div>
+
+            <div class="contact-content reveal">
+                <p class="contact-description">
+                    N'hésitez pas à me contacter pour toute question, opportunité professionnelle ou simplement pour
+                    discuter d'un projet.
+                </p>
+                <div class="contact-links">
+                    <a href="file:///C:/Users/cohen/Downloads/CV%20Yair%20Cohen%20(9).pdf" class="contact-link"
+                        target="_blank">
+                        <i class="fas fa-file-pdf"></i> Télécharger mon CV
+                    </a>
+                    <a href="https://github.com/Yair06" class="contact-link" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/yair-cohen-4013842bb/" class="contact-link" target="_blank"
+                        rel="noopener">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Yair Cohen. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- ═══ SCRIPTS ═══ -->
     <script src="Willy%20Wonka%20portfolio%20Template%20free/themes/js/index.js"></script>
-    <!--particles script-->
-    <script>
-  particlesJS("particles", {"particles":{"number":{"value":40,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
-    </script>
-    </div>
+
 </body>
+
 </html>
